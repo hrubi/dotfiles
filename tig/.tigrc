@@ -1,0 +1,10 @@
+# vi: set ft=conf
+
+bind generic J next
+bind generic K previous
+bind generic <Ctrl-f> move-page-down
+bind generic <Ctrl-b> move-page-up
+
+# set vertical-split = false
+set main-view = id:yes date:yes author:yes commit-title:yes,graph=yes,refs=yes
+bind main <Ctrl-k> !git checkout %(commit)
