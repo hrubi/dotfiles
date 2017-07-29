@@ -1,0 +1,4 @@
+include ~/.taskrc
+
+# Files
+data.location=/home/hrubi/.task_work
