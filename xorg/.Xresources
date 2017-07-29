@@ -1,0 +1,27 @@
+! vi: set ft=xdefaults
+
+! externally provided color scheme, eg.
+! git clone https://github.com/chriskempson/tomorrow-theme.git
+! ln -s $PWD/tomorrow-theme/Xdefaults/XresourceTomorrowNight .Xresource
+#include ".Xresources.terminal_colors"
+
+! urxvt
+URxvt.font:             xft:DejaVu Sans Mono:pixelsize=12
+URxvt.antialias:        true
+URxvt.letterSpace:      -1
+URxvt.url-launcher:     firefox-bin
+URxvt.scrollBar:        false
+URxvt.perl-ext:         default,matcher,-searchable-scrollback
+!URxvt.perl-ext-common:  matcher
+URxvt.urgentOnBell:     true
+URxvt.iso14755:         true
+URxvt.iso14755_52:      true
+URxvt.termName:         rxvt-unicode
+
+! XLock
+XLock.mode:     blank
+XLock.font:     -*-terminus-medium-r-normal-*-24-*-*-*-*-*-*-*
+XLock.planfont: -*-terminus-medium-r-normal-*-32-*-*-*-*-*-*-*
+XLock.info:
+XLock.resetsaver: off
+XLock.dpmsoff: 5
