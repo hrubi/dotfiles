@@ -30,6 +30,7 @@ export KRB5_CONFIG="$HOME/.krb5.conf"
 export MANPATH="$HOME/apps/share/man:$MANPATH"
 export LESS='-iFRX'
 export SOLARIZED="true" # for 'eix'
+export GPGKEY="0x640E836E"
 
 
 # keychain
