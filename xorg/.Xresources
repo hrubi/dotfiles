@@ -9,7 +9,7 @@
 URxvt.font:             xft:DejaVu Sans Mono:pixelsize=12
 URxvt.antialias:        true
 URxvt.letterSpace:      -1
-URxvt.url-launcher:     firefox-bin
+URxvt.url-launcher:     firefox
 URxvt.scrollBar:        false
 URxvt.perl-ext:         default,matcher,-searchable-scrollback
 !URxvt.perl-ext-common:  matcher

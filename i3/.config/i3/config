@@ -25,7 +25,7 @@ bindsym $alt+Escape kill
 bindsym $alt+$ctrl+Return exec urxvtc
 bindsym $alt+$ctrl+x exec dmenu_run
 bindsym $alt+$ctrl+l exec xlock
-bindsym $alt+$ctrl+d exec firefox-bin
+bindsym $alt+$ctrl+d exec firefox
 bindsym $alt+$ctrl+s exec touchpad
 
 # change focus
