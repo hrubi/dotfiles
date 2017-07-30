@@ -28,6 +28,12 @@ bindsym $alt+$ctrl+l exec xlock
 bindsym $alt+$ctrl+d exec firefox
 bindsym $alt+$ctrl+s exec touchpad
 
+# volume (https://github.com/hrubi/hrubitools/blob/master/mixer-set)
+bindsym XF86AudioRaiseVolume exec mixer-set 0 up 5
+bindsym XF86AudioLowerVolume exec mixer-set 0 down 5
+bindsym XF86AudioMute exec mixer-set 0 toggle
+bindsym XF86AudioMicMute exec mixer-set 0 mic_toggle
+
 # change focus
 bindsym $win+$left focus left
 bindsym $win+$down focus down
