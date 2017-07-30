@@ -22,7 +22,7 @@ xinput set-prop "PS/2 Generic Mouse" "Evdev Wheel Emulation Button" 2
 xinput set-prop "PS/2 Generic Mouse" "Evdev Wheel Emulation Timeout" 200
 xinput set-prop "PS/2 Generic Mouse" "Evdev Wheel Emulation Axes" 6 7 4 5
 # trackpoint sensitivity
-xinput set-prop "PS/2 Generic Mouse" "Device Accel Constant Deceleration" 0.5
+xinput set-prop "PS/2 Generic Mouse" "Device Accel Constant Deceleration" 1
 
 # Disable screensaver
 xset -dpms
