@@ -16,6 +16,7 @@ order += "disk /home"
 order += "wireless wlp4s0"
 order += "battery all"
 order += "load"
+order += "path_exists LID_SUSPEND"
 order += "time"
 
 wireless wlp4s0 {
@@ -41,4 +42,10 @@ disk "/" {
 
 disk "/home" {
         format = "/home %avail"
+}
+
+path_exists LID_SUSPEND {
+        path = "/home/hrubi/.lid-suspend"
+        format = ""
+        format_down = "NOSUS"
 }
