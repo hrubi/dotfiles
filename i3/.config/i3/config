@@ -23,7 +23,7 @@ bindsym $alt+Escape kill
 
 # applications
 bindsym $alt+$ctrl+Return exec urxvtc
-bindsym $alt+$ctrl+x exec dmenu_run
+bindsym $alt+$ctrl+x exec dmenu_run -b
 bindsym $alt+$ctrl+l exec xlock
 bindsym $alt+$ctrl+d exec firefox
 bindsym $alt+$ctrl+s exec touchpad
@@ -136,5 +136,6 @@ bindsym $win+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+        position top
         status_command i3status
 }
