@@ -92,25 +92,98 @@ function _hrubi_cli_fg () {
 }
 zle -N _hrubi_cli_fg
 
+autoload -Uz add-zsh-hook
 
-# prompt
-# precmd - list jobs and get vcs info
-function _hrubi_prompt_precmd () {
+# load and configure VCS
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' actionformats \
+  ' %F{magenta}(%f%s%F{magenta})%F{yellow}-%F{magenta}[%F{green}%b%F{yellow}|%F{red}%a%F{magenta}]%f ' \
+  'zsh: %r'
+zstyle ':vcs_info:*' formats       \
+  ' %F{magenta}(%f%s%F{magenta})%F{yellow}-%F{magenta}[%F{green}%b%F{magenta}]%f ' \
+  'zsh: %r'
+zstyle ':vcs_info:*' enable git
+
+add-zsh-hook precmd vcs_info
+
+
+# list background jobs
+function _hrubi_list_jobs () {
   setopt noxtrace noksharrays localoptions
   [[ -o interactive ]] && jobs -l
-  vcs_info
+}
+add-zsh-hook precmd _hrubi_list_jobs
+
+# terminal-title wizardry
+# (taken from grml)
+function ESC_print () {
+  info_print $'\ek' $'\e\\' "$@"
+}
+function set_title () {
+  info_print  $'\e]0;' $'\a' "$@"
 }
 
+function info_print () {
+  local esc_begin esc_end
+  esc_begin="$1"
+  esc_end="$2"
+  shift 2
+  printf '%s' ${esc_begin}
+  printf '%s' "$*"
+  printf '%s' "${esc_end}"
+}
+
+function grml_reset_screen_title () {
+  case $TERM in
+    (xterm*|rxvt*)
+      set_title ${(%):-"%n@%m: %~"}
+      ;;
+  esac
+}
+
+function grml_vcs_to_screen_title () {
+  if [[ $TERM == screen* ]] ; then
+    if [[ -n ${vcs_info_msg_1_} ]] ; then
+      ESC_print ${vcs_info_msg_1_}
+    else
+      ESC_print "zsh"
+    fi
+  fi
+}
+
+function grml_maintain_name () {
+  if [[ -n "$HOSTNAME" ]] && [[ "$HOSTNAME" != $(hostname) ]] ; then
+    NAME="@$HOSTNAME"
+  fi
+}
+
+function grml_cmd_to_screen_title () {
+  setopt localoptions extended_glob
+  # get the name of the program currently running and hostname of local
+  # machine set screen window title if running in a screen
+  if [[ "$TERM" == screen* ]] ; then
+    local CMD="${1[(wr)^(*=*|sudo|ssh|-*)]}$NAME"
+    ESC_print ${CMD}
+  fi
+}
+
+function grml_control_xterm_title () {
+  case $TERM in
+    (xterm*|rxvt*)
+      set_title "${(%):-"%n@%m:"}" "$1"
+      ;;
+  esac
+}
+
+add-zsh-hook precmd grml_reset_screen_title
+add-zsh-hook precmd grml_vcs_to_screen_title
+add-zsh-hook preexec grml_maintain_name
+add-zsh-hook preexec grml_cmd_to_screen_title
+add-zsh-hook preexec grml_control_xterm_title
+
+# prompt
 function _hrubi_prompt_setup () {
   setopt prompt_subst
-
-  # load and configure VCS
-  autoload -Uz vcs_info
-  zstyle ':vcs_info:*' actionformats \
-    ' %F{magenta}(%f%s%F{magenta})%F{yellow}-%F{magenta}[%F{green}%b%F{yellow}|%F{red}%a%F{magenta}]%f '
-  zstyle ':vcs_info:*' formats       \
-    ' %F{magenta}(%f%s%F{magenta})%F{yellow}-%F{magenta}[%F{green}%b%F{magenta}]%f '
-  zstyle ':vcs_info:*' enable git
 
   # set the prompt chunks
   local p_user='%n'
@@ -125,8 +198,6 @@ function _hrubi_prompt_setup () {
 $p_rc$p_user@$p_machine $p_pwd$p_vcs
 $p_end"
 
-  autoload -Uz add-zsh-hook
-  add-zsh-hook precmd _hrubi_prompt_precmd
 }
 _hrubi_prompt_setup
 
