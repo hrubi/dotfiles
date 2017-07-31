@@ -28,5 +28,8 @@ xinput set-prop "PS/2 Generic Mouse" "Device Accel Constant Deceleration" 1
 xset -dpms
 xset s off
 
+# NetworkManager
+ck-launch-session nm-applet &
+
 echo "Starting i3 at $(date)" >> ~/.i3log
 exec i3 -V -d all >> ~/.i3log
