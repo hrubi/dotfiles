@@ -6,7 +6,7 @@
 #include ".Xresources.terminal_colors"
 
 ! urxvt
-URxvt.font:             xft:DejaVu Sans Mono:pixelsize=12
+URxvt.font:             xft:DejaVu Sans Mono:pixelsize=14
 URxvt.antialias:        true
 URxvt.letterSpace:      -1
 URxvt.url-launcher:     firefox
