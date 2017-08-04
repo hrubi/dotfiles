@@ -6,6 +6,7 @@ path=(
   $HOME/projects/hrubitools
   $HOME/bin
   $HOME/apps/bin
+  $HOME/.gem/ruby/2.2.0/bin
   $path
   /usr/local/sbin
   /usr/sbin
