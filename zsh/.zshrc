@@ -214,3 +214,9 @@ function sshrm () {
   fi
   sed -i ${1}d ~/.ssh/known_hosts
 }
+
+function slayerdiff () {
+  local file=$1
+  : ${file:?}
+  sudo vim -O "${file}" "/slayer/${file}"
+}
