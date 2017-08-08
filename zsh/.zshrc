@@ -191,7 +191,7 @@ function _hrubi_prompt_setup () {
     kvm-fbsd yellow
   )
 
-  local host_color=${host_color_map[$(hostname -s)]}
+  local host_color=${host_color_map[$hostname]:-default}
 
   # set the prompt chunks
   local p_user='%n'
@@ -223,8 +223,12 @@ function sshrm () {
   sed -i ${1}d ~/.ssh/known_hosts
 }
 
-function slayerdiff () {
-  local file=$1
-  : ${file:?}
-  sudo vim -O "${file}" "/slayer/${file}"
-}
+if [[ $nodetype == desktop ]]; then
+
+  function slayerdiff () {
+    local file=$1
+    : ${file:?}
+    sudo vim -O "${file}" "/slayer/${file}"
+  }
+
+fi
