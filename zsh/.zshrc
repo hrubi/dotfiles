@@ -185,9 +185,17 @@ add-zsh-hook preexec grml_control_xterm_title
 function _hrubi_prompt_setup () {
   setopt prompt_subst
 
+  declare -A host_color_map
+  host_color_map=(
+    dundee green
+    kvm-fbsd yellow
+  )
+
+  local host_color=${host_color_map[$(hostname -s)]}
+
   # set the prompt chunks
   local p_user='%n'
-  local p_machine='%F{green}%m%f'
+  local p_machine="%F{${host_color}}%m%f"
   local p_pwd='%~'
   local p_rc='%(?..%B%F{red}%?%f%b )'
   local p_vcs='${vcs_info_msg_0_}'
