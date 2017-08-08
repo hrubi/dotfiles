@@ -1,4 +1,4 @@
-# vi: set ft=conf
+# vim: ft=conf
 
 bind generic J next
 bind generic K previous
