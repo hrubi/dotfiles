@@ -32,6 +32,8 @@ setopt append_history
 setopt no_inc_append_history
 # exclusive history for each shell
 setopt no_share_history
+# do not store consecutive history duplicates
+setopt hist_ignore_dups
 # brag on glob mismatch
 setopt nomatch
 # be explicit with 'cd' command
