@@ -193,7 +193,7 @@ function _hrubi_prompt_setup () {
     kvm-fbsd yellow
   )
 
-  local host_color=${host_color_map[$hostname]:-default}
+  local host_color=${host_color_map[${hostname:-$(hostname)}]:-default}
 
   # set the prompt chunks
   local p_user='%n'
