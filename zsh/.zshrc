@@ -191,6 +191,7 @@ function _hrubi_prompt_setup () {
   host_color_map=(
     dundee green
     kvm-fbsd yellow
+    fbsd-dev blue
   )
 
   local host_color=${host_color_map[${hostname:-$(hostname)}]:-default}
