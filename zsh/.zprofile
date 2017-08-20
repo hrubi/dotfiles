@@ -9,6 +9,8 @@ nodetype_map=(
 export hostname=$(hostname -s)
 export nodetype=${nodetype_map[$hostname]}
 
+export MANWIDTH=80
+
 if [[ $nodetype == desktop ]]; then
 
   # set the PATH
