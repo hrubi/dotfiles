@@ -8,7 +8,7 @@ set -o nounset
 
 urxvtd -q -o -f
 
-setxkbmap -layout us,cz -variant ",qwerty" -option "grp:caps_toggle" &
+setxkbmap -layout us,cz -variant ",qwerty" -option "grp:caps_toggle" -option "grp_led:caps" &
 xautolock -corners '0-0-' -time 5 &
 xsetroot -solid black &
 
