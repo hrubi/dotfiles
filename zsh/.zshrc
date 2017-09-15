@@ -194,7 +194,7 @@ function _hrubi_prompt_setup () {
     fbsd-dev blue
   )
 
-  local host_color=${host_color_map[${hostname:-$(hostname)}]:-default}
+  local host_color=${host_color_map[${hostname_s:-$(hostname)}]:-default}
 
   # set the prompt chunks
   local p_user='%n'

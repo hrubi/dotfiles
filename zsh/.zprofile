@@ -6,8 +6,8 @@ nodetype_map=(
   dundee   desktop
   kvm-fbsd vps
 )
-export hostname=$(hostname -s)
-export nodetype=${nodetype_map[$hostname]}
+export hostname_s=$(hostname -s)
+export nodetype=${nodetype_map[$hostname_s]}
 
 export MANWIDTH=80
 
