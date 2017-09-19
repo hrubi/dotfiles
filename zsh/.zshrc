@@ -18,6 +18,9 @@ zstyle :compinstall filename '/home/hrubi/.zshrc'
 autoload -Uz compinit
 compinit
 
+# zmv tool
+autoload -Uz zmv
+
 
 # history
 HISTFILE=~/.histfile
