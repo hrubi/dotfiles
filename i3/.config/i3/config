@@ -81,7 +81,7 @@ bindsym $win+space focus mode_toggle
 bindsym $win+a focus parent
 
 # focus the child container
-bindsym $alt+d focus child
+bindsym $win+d focus child
 
 # switch to workspace
 bindsym $alt+F1 workspace 1
