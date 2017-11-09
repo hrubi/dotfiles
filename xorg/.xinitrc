@@ -15,6 +15,8 @@ xsetroot -solid black &
 # Disable annoying inputs
 xinput disable "SynPS/2 Synaptics TouchPad"
 
+gtk-redshift -l 50.08:14.43 &
+
 # FIXME - wrong (generic) model on X1 gen 5
 # trackpoint wheel emulation
 # xinput set-prop "PS/2 Generic Mouse" "Evdev Wheel Emulation" 1
