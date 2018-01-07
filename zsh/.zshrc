@@ -194,6 +194,7 @@ function _hrubi_prompt_setup () {
   host_color_map=(
     dundee green
     kvm-fbsd yellow
+    it red
     fbsd-dev blue
   )
 
