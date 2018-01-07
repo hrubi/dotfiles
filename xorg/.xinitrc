@@ -12,8 +12,9 @@ setxkbmap -layout us,cz -variant ",qwerty" -option "grp:caps_toggle" -option "gr
 xautolock -corners '0-0-' -time 5 &
 xsetroot -solid black &
 
-# Disable annoying inputs
+# Touchpad
 xinput disable "SynPS/2 Synaptics TouchPad"
+synclient TapButton1=1 TapButton2=3 TapButton3=2
 
 gtk-redshift -l 50.08:14.43 &
 
