@@ -21,3 +21,4 @@ calendar.details=full
 urgency.tags.coefficient=0.0
 urgency.annotations.coefficient=0.0
 urgency.active.coefficient=0.0
+urgency.blocking.coefficient=0.0
