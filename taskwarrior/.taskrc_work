@@ -2,3 +2,7 @@ include ~/.taskrc
 
 # Files
 data.location=/home/hrubi/.task_work
+
+# urgency
+# pager duty is urgent
+urgency.user.tag.pd.coefficient=10.0

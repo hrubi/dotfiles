@@ -16,3 +16,8 @@ include /usr/share/task/rc/holidays.cs-CZ.rc
 calendar.holidays=full
 weekstart=Monday
 calendar.details=full
+
+# urgency
+urgency.tags.coefficient=0.0
+urgency.annotations.coefficient=0.0
+urgency.active.coefficient=0.0
