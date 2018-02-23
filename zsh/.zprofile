@@ -42,7 +42,7 @@ if [[ $nodetype == desktop ]]; then
   export PROJECTS_GD="$PROJECTS/gooddata"
   export KRB5_CONFIG="$HOME/.krb5.conf"
   export MANPATH="$HOME/apps/share/man:$MANPATH"
-  export LESS='-iFRX'
+  export LESS='-iRX'
   export SOLARIZED="true" # for 'eix'
   export GPGKEY="0x640E836E"
 
