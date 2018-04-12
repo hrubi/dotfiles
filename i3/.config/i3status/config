@@ -20,7 +20,7 @@ order += "path_exists LID_SUSPEND"
 order += "time"
 
 wireless wlp4s0 {
-        format_up = "W: (%quality at %essid) %ip"
+        format_up = "W: (%quality at %essid, %bitrate) %ip"
         format_down = "W: down"
 }
 
