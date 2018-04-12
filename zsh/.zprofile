@@ -45,6 +45,7 @@ if [[ $nodetype == desktop ]]; then
   export LESS='-iRX'
   export SOLARIZED="true" # for 'eix'
   export GPGKEY="0x640E836E"
+  export SHELLCHECK_OPTS='--exclude=SC1117'
 
 
   # keychain
