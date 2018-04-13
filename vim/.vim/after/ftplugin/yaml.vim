@@ -1,0 +1,1 @@
+../../../../deps/vim-yaml/after//ftplugin/yaml.vim
