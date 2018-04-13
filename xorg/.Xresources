@@ -16,7 +16,7 @@ URxvt.perl-ext:         default,matcher,-searchable-scrollback
 URxvt.urgentOnBell:     true
 URxvt.iso14755:         true
 URxvt.iso14755_52:      true
-URxvt.termName:         rxvt-unicode
+URxvt.termName:         rxvt-unicode-256color
 
 ! XLock
 XLock.mode:     blank
