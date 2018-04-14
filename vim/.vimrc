@@ -1,6 +1,7 @@
 " Dependencies:
 "   ctrlp                         https://github.com/ctrlpvim/ctrlp.vim
 "   github-colorscheme (bundled)  https://github.com/endel/vim-github-colorscheme.git
+"   securemodelines               https://github.com/ciaranm/securemodelines
 "   syntastic                     https://github.com/scrooloose/syntastic
 "   tomorrow-theme (bundled)      https://github.com/hrubi/tomorrow-theme.git
 "   vim-fugitive (bundled)        https://github.com/tpope/vim-fugitive
@@ -23,6 +24,8 @@ syntax on
 filetype plugin indent on
 set hlsearch
 colorscheme Tomorrow-Night
+" status line
+set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 "show tabs and trailing spaces
 set list
 set listchars=tab:>-,trail:-
@@ -110,10 +113,6 @@ function! MoveFile(newspec)
 endfunction
 command! -nargs=1 -complete=file -bar MoveFile call MoveFile('<args>')
 
-
-
-" plugins
-
 " puppet-vim
 let g:puppet_align_hashes = 0
 
@@ -137,6 +136,3 @@ let g:syntastic_check_on_wq = 0
 let g:ctrlp_by_filename = 1
 let g:ctrlp_show_hidden = 0
 let g:ctrlp_open_new_file = 't'
-
-" status line, including all the plugins
-set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
