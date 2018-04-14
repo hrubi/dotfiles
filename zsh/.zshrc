@@ -230,5 +230,18 @@ function sshrm () {
   sed -i ${1}d ~/.ssh/known_hosts
 }
 
+function curlgh () {
+  curl -u ":$(getpass github)" "$@"
+}
 
+function curlgh-gdgate () {
+  curl -u ":$(getpass github-gdgate)" "$@"
+}
 
+function ghtoken () {
+  getpass github
+}
+
+function ghtoken-zuul () {
+  getpass github-zuul
+}
