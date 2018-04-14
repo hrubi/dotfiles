@@ -22,11 +22,7 @@ set softtabstop=4
 syntax on
 filetype plugin indent on
 set hlsearch
-if &diff
-    colorscheme github
-else
-    colorscheme Tomorrow-Night
-endif
+colorscheme Tomorrow-Night
 "show tabs and trailing spaces
 set list
 set listchars=tab:>-,trail:-
