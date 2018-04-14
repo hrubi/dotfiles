@@ -18,13 +18,13 @@ synclient TapButton1=1 TapButton2=3 TapButton3=2
 
 gtk-redshift -l 50.08:14.43 &
 
-# FIXME - wrong (generic) model on X1 gen 5
-# trackpoint wheel emulation
-# xinput set-prop "PS/2 Generic Mouse" "Evdev Wheel Emulation" 1
-# xinput set-prop "PS/2 Generic Mouse" "Evdev Wheel Emulation Button" 2
-# xinput set-prop "PS/2 Generic Mouse" "Evdev Wheel Emulation Timeout" 200
-# xinput set-prop "PS/2 Generic Mouse" "Evdev Wheel Emulation Axes" 6 7 4 5
-# xinput set-prop "PS/2 Generic Mouse" "Device Accel Constant Deceleration" 1
+# wheel emulation
+xinput set-prop "TPPS/2 Elan TrackPoint" "Evdev Wheel Emulation" 1
+xinput set-prop "TPPS/2 Elan TrackPoint" "Evdev Wheel Emulation Button" 2
+xinput set-prop "TPPS/2 Elan TrackPoint" "Evdev Wheel Emulation Timeout" 200
+xinput set-prop "TPPS/2 Elan TrackPoint" "Evdev Wheel Emulation Axes" 6 7 4 5
+# acceleration
+xinput set-prop "TPPS/2 Elan TrackPoint" "Device Accel Constant Deceleration" 0.4
 
 # Disable screensaver
 xset -dpms
