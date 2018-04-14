@@ -1,18 +1,18 @@
 [submodule "deps/vim-fugitive"]
-	path = deps/vim-fugitive
+	path = .dotfiles-deps/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
 [submodule "deps/vim-github-colorscheme"]
-	path = deps/vim-github-colorscheme
+	path = .dotfiles-deps/vim-github-colorscheme
 	url = https://github.com/endel/vim-github-colorscheme.git
 [submodule "deps/tomorrow-theme"]
-	path = deps/tomorrow-theme
+	path = .dotfiles-deps/tomorrow-theme
 	url = https://github.com/hrubi/tomorrow-theme.git
 [submodule "deps/vim-abolish"]
-	path = deps/vim-abolish
+	path = .dotfiles-deps/vim-abolish
 	url = https://github.com/tpope/vim-abolish
 [submodule "deps/cram"]
-	path = deps/cram
+	path = .dotfiles-deps/cram
 	url = https://github.com/brodie/cram
 [submodule "deps/vim-yaml"]
-	path = deps/vim-yaml
+	path = .dotfiles-deps/vim-yaml
 	url = https://github.com/avakhov/vim-yaml
