@@ -16,8 +16,9 @@ if [[ $nodetype == desktop ]]; then
   # set the PATH
   typeset -U path
   path=(
-    $HOME/projects/hrubitools
     $HOME/bin
+    $HOME/projects/hrubi/tools
+    $HOME/projects/hrubi/gdtools
     $HOME/apps/bin
     $HOME/.gem/ruby/2.2.0/bin
     $path
