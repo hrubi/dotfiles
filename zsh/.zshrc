@@ -230,12 +230,5 @@ function sshrm () {
   sed -i ${1}d ~/.ssh/known_hosts
 }
 
-if [[ $nodetype == desktop ]]; then
 
-  function slayerdiff () {
-    local file=$1
-    : ${file:?}
-    sudo vim -O "${file}" "/slayer/${file}"
-  }
 
-fi
